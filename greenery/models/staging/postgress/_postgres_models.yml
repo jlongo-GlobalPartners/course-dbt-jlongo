@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_postgres__addresses
+    description: List of the delivery addresses on the greenery platform
+  - name: stg_postgres__events
+    description: List of user (customer) events and actions that take place on the greenery platform. 
+  - name: stg_postgres__order_items
+    description: Contains all of the items within an order placed on the greenery platform.
+  - name: stg_postgres__orders
+    description: Contains all information about orders placed on the greenery platform. For example, cost, user and delivery information
+  - name: stg_postgres__products
+    description: List of all the products on the greenery platform and its inventory and price
+  - name: stg_postgres__promos
+    description: List of all the promotion codes on the greenery platform and if it is active and the amount of the promotion
+  - name: stg_postgres__users
+    description: List of all users on the greenery platform and contains user attributes
+  
