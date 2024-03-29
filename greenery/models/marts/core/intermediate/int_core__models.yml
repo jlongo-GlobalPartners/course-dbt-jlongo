@@ -1,0 +1,14 @@
+version: 2
+
+models:
+
+  - name: int_product_order_event
+    description: dimension table of product metrics 
+    columns:
+      - name: product_id
+      - name: first_purchase_date
+      - name: last_purchase_date
+      - name: historical_quantity
+      - name: historical_orders
+      - name: total_views
+      

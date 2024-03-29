@@ -1,0 +1,20 @@
+version: 2
+
+models: 
+
+  - name: dim_products
+    description: Product dimension containing all product related data for Greenery. grain is at product 
+    columns:
+      - name: product_id
+        tests:
+          - unique
+          - not_null
+      - name: name
+      - name: price
+      - name: inventory
+      - name: first_purchase_dt
+      - name: last_purchase_dt
+      - name: historical_total_views
+      - name: historical_total_orders
+      
+      
