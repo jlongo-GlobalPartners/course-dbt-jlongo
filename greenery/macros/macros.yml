@@ -1,0 +1,10 @@
+version: 2
+
+macros:
+  - name: sum_of
+    description: Function that sums a column with the specified value
+    arguments:
+      - name: column_name
+        description: column name parameter
+      - name: column_value
+        description: value of the column name 

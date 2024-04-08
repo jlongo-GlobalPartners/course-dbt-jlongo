@@ -12,4 +12,10 @@ models:
       - name: page_url
       - name: created_at
 
+  - name: int_session_duration
+    description: Fact model with all session duration. Grain is session
+    columns:
+      - name: session_id
+      - name: session_started_at
+      - name: session_ended_at
   

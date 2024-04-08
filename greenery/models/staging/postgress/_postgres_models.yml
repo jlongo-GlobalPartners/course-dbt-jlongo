@@ -19,6 +19,12 @@ models:
     description: Contains all of the items within an order placed on the greenery platform.
   - name: stg_postgres__orders
     description: Contains all information about orders placed on the greenery platform. For example, cost, user and delivery information  
+    columns:
+      - name: order_total
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1000
   - name: stg_postgres__products
     description: List of all the products on the greenery platform and its inventory and price
     columns:
