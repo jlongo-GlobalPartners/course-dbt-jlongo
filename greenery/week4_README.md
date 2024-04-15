@@ -7,7 +7,8 @@ Monstera
 Bamboo
 Pothos
 
-``sql
+```sql
+
     select 
         * 
     from 
@@ -15,6 +16,7 @@ Pothos
     where
         dbt_valid_to is not null
         and dbt_valid_to > '2024-04-08 00:11:04.860'
+```
 
 ## Now that we have 3 weeks of snapshot data, can you use the inventory changes to determine which products had the most fluctuations in inventory?
 
@@ -27,7 +29,7 @@ Pothos
 | 2                 | ZZ Plant       |
 | 2                 | Bamboo         |
 
-``sql
+```sql
     select 
         count(name) as inventory_changes ,
         name
@@ -40,19 +42,7 @@ Pothos
         name
     order by 
         1 desc
-
-select 
-    count(name) as inventory_changes ,
-    name
-    
-from 
-    DEV_DB.DBT_JLONGOGLOBALPCOM.INVENTORY_SNAPSHOT
-where
-    dbt_valid_to is not null
-group by 
-    name
-order by 
-    1 desc
+```
 
 
 ## Did we have any items go out of stock in the last 3 weeks? 
@@ -62,7 +52,7 @@ order by
 | 4cda01b9-62e2-46c5-830f-b7f262a58fb1 | Pothos           | 30.5  | 0         | 2024-04-08 00:11:04.860     | 2024-04-08 00:11:04.860    | 2024-04-15 01:48:00.584   |
 
 
-``sql
+```sql
     select 
     PRODUCT_ID, NAME, PRICE, INVENTORY, DBT_UPDATED_AT, DBT_VALID_FROM, DBT_VALID_TO
         
@@ -71,6 +61,7 @@ order by
     where
         dbt_valid_to is not null
         and inventory = 0
+```
 
 ## How are our users moving through the product funnel?
 Users move from page views to add to carts around 53% of the time. Approximately 37% of the time they checkout after they have added to cart. And finally 93% of the time their packages are shipped.
