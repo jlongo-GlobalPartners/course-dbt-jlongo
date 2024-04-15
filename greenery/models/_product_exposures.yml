@@ -1,0 +1,12 @@
+version: 2
+
+exposures:
+  - name: product funnel
+    type: dashboard
+    description: 
+      Analysis indicating how users move through our product funnel 
+    depends_on: 
+      - ref('fct_events')
+    owner:
+      name: Jason Longo
+      email: jlongo@globalp.com
